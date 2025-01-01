@@ -489,3 +489,62 @@ body {
 .command-item:last-child {
     border-bottom: none;
 } 
+
+/* Privacy Policy Styles */
+.privacy-container {
+    max-width: 800px;
+    margin: 7rem auto 2rem;
+    padding: 0 2rem;
+    color: var(--text);
+}
+
+.privacy-container h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.policy-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.policy-section h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.policy-section ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.policy-section li {
+    margin-bottom: 0.5rem;
+}
+
+.policy-section code {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.policy-section a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.policy-section a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+} 
