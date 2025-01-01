@@ -3,7 +3,7 @@
 The official website for Stellar Bot - A powerful Discord music and moderation bot.
 
 ## 🌐 Live Demo
-Visit the website: [Stellar Bot](https://your-website-url.com)
+Visit the website: [Stellar Bot](https://stellar-bot-web.vercel.app/)
 
 ## 📝 Description
 This is the source code for Stellar Bot's website. The website showcases the bot's features, commands, and provides documentation for users.
