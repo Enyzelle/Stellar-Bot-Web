@@ -3,300 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Command List for Stellar Music Bot">
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
-    <title>Stellar Music Bot Commands</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #2c2c2c, #3e3e3e, #1e1e1e, #292929);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(to right, #1e1e1e, #292929);
-            border-bottom: 2px solid #444;
-            animation: headerMove 10s infinite alternate;
-        }
-
-        @keyframes headerMove {
-            0% { background-position: 0%; }
-            100% { background-position: 100%; }
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            color: #bbb;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        header img {
-            width: 80px;
-            margin-top: 10px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #999;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #bbb;
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-        }
-
-        nav a::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background: #bbb;
-            bottom: 0;
-            left: -100%;
-            transition: 0.4s;
-        }
-
-        nav a:hover::before {
-            left: 0;
-        }
-
-        .container {
-            padding: 30px;
-        }
-
-        .category {
-            margin-bottom: 30px;
-        }
-
-        .category h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #bbb;
-            display: inline-block;
-            background: linear-gradient(to right, #bbb, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .commands {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .command {
-            background: linear-gradient(45deg, #2c2c2c, #3e3e3e, #2c2c2c);
-            background-size: 200% 200%;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            font-size: 1rem;
-            transition: transform 0.3s, background 0.5s;
-            color: #bbb;
-            cursor: pointer;
-        }
-
-        .command:hover {
-            transform: scale(1.1);
-            background: linear-gradient(to right, #bbb, #888);
-            color: #000;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: linear-gradient(to right, #1e1e1e, #292929);
-            border-top: 2px solid #444;
-            color: #aaa;
-            animation: footerMove 10s infinite alternate;
-        }
-
-        @keyframes footerMove {
-            0% { background-position: 100%; }
-            100% { background-position: 0%; }
-        }
-
-        footer a {
-            color: #bbb;
-            text-decoration: none;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background: #292929;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            color: #fff;
-            width: 80%;
-            max-width: 500px;
-        }
-
-        .modal-content h3 {
-            margin-bottom: 15px;
-        }
-
-        .modal-content p {
-            font-size: 1rem;
-        }
-
-        .close {
-            background: #bbb;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-    </style>
+    <title>Commands - Stellar Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
-    <header>
-        <h1>Stellar Music Bot</h1>
-        <img src="assets/img/logo.png" alt="Stella Icon" width="10000">
-        <p>Your all-in-one Discord bot for music, fun, moderation, and utility commands!</p>
-        <nav>
-            <a href="#fun">Fun</a>
-            <a href="#moderation">Moderation</a>
-            <a href="#music">Music</a>
-            <a href="#utility">Utility</a>
-            <a href="faq.html">FAQ</a>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Stellar Bot Logo">
+                <span>Stellar Bot</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="commands.html" class="active">Commands</a>
+                <a href="faq.html">FAQ</a>
+                <a href="https://discord.gg/your-server" target="_blank">Support</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
 
-    <div class="container">
-        <div class="category" id="fun">
-            <h2>Fun Commands</h2>
-            <div class="commands">
-                <div class="command" data-command="!8ball" data-description="Ask the magic 8-ball a question.">8ball</div>
-                <div class="command" data-command="!ascii" data-description="Convert text to ASCII art.">ascii</div>
-                <div class="command" data-command="!coinflip" data-description="Flip a coin.">coinflip</div>
-                <div class="command" data-command="!meme" data-description="Get a random meme.">meme</div>
-                <div class="command" data-command="!roll" data-description="Roll a dice with custom sides.">roll</div>
-                <div class="command" data-command="!rps" data-description="Play Rock, Paper, Scissors.">rps</div>
-                <div class="command" data-command="!say" data-description="Make the bot say something.">say</div>
-                <div class="command" data-command="!weather" data-description="Get weather information for a location.">weather</div>
+    <!-- Commands Section -->
+    <div class="commands-container">
+        <div class="commands-header">
+            <h1>Bot Commands</h1>
+            <div class="search-box">
+                <input type="text" id="command-search" placeholder="Search commands...">
             </div>
         </div>
 
-        <div class="category" id="moderation">
-            <h2>Moderation Commands</h2>
-            <div class="commands">
-                <div class="command" data-command="!ban" data-description="Ban a member from the server.">ban</div>
-                <div class="command" data-command="!clear" data-description="Clear messages from the channel.">clear</div>
-                <div class="command" data-command="!kick" data-description="Kick a member from the server.">kick</div>
-                <div class="command" data-command="!lockdown" data-description="Lock/unlock the current channel.">lockdown</div>
-                <div class="command" data-command="!slowmode" data-description="Set channel slowmode.">slowmode</div>
-                <div class="command" data-command="!timeout" data-description="Timeout a member.">timeout</div>
-                <div class="command" data-command="!warn" data-description="Warn a member.">warn</div>
+        <div class="commands-grid">
+            <!-- Configuration Commands -->
+            <div class="command-category">
+                <h2>⚙️ Configuration Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <h3>!prefix</h3>
+                        <p>Change the bot's prefix for your server</p>
+                        <span class="usage">Usage: !prefix &lt;new_prefix/reset/show&gt;</span>
+                        <div class="command-examples">
+                            <code>!prefix ></code> - Change prefix to >
+                            <code>!prefix reset</code> - Reset to default prefix
+                            <code>!prefix show</code> - Show current prefix
+                        </div>
+                        <span class="permission">Required Permission: Administrator</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!dj</h3>
+                        <p>Configure DJ role settings</p>
+                        <span class="usage">Usage: !dj &lt;set/remove/info&gt; [@role]</span>
+                        <div class="command-examples">
+                            <code>!dj set @DJ</code> - Set DJ role
+                            <code>!dj remove</code> - Remove DJ role
+                            <code>!dj info</code> - View DJ settings
+                        </div>
+                        <span class="permission">Required Permission: Manage Roles</span>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="category" id="music">
-            <h2>Music Commands</h2>
-            <div class="commands">
-                <div class="command" data-command="!dj" data-description="Manage DJ role settings.">dj</div>
-                <div class="command" data-command="!filter" data-description="Apply audio filters to the music.">filter</div>
-                <div class="command" data-command="!forceskip" data-description="Force skip the current song (DJ only).">forceskip</div>
-                <div class="command" data-command="!loop" data-description="Toggle loop mode (off/track/queue).">loop</div>
-                <div class="command" data-command="!lyrics" data-description="Get lyrics for the current song or search for lyrics.">lyrics</div>
-                <div class="command" data-command="!nowplaying" data-description="Show currently playing track.">nowplaying</div>
-                <div class="command" data-command="!pause" data-description="Pause the current track.">pause</div>
-                <div class="command" data-command="!play" data-description="Play a song or add it to queue.">play</div>
-                <div class="command" data-command="!queue" data-description="Display the current queue.">pause</div>
-                <div class="command" data-command="!remove" data-description="Remove a song from the queue (DJ only).">remove</div>
-                <div class="command" data-command="!seek" data-description="Seek to a specific position in the current track.">seek</div>
-                <div class="command" data-command="!shuffle" data-description="Shuffle the current queue.">shuffle</div>
-                <div class="command" data-command="!skip" data-description="Skip the current song.">skip</div>
-                <div class="command" data-command="!volume" data-description="Adjust the music volume.">volume</div>
+            <!-- Music Commands -->
+            <div class="command-category">
+                <h2>🎵 Music Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <h3>!play</h3>
+                        <p>Play a song or playlist</p>
+                        <span class="usage">Usage: !play &lt;song/URL&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!skip</h3>
+                        <p>Skip the current track</p>
+                        <span class="usage">Usage: !skip</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!loop</h3>
+                        <p>Toggle loop mode (off/track/queue)</p>
+                        <span class="usage">Usage: !loop off/track/queue</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!filter</h3>
+                        <p>Apply audio filters to the music</p>
+                        <span class="usage">Usage: !filter &lt;filter_name&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!forceskip</h3>
+                        <p>Force skip the current track (DJ only)</p>
+                        <span class="usage">Usage: !forceskip</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!lyrics</h3>
+                        <p>Get lyrics for the current song or search for lyrics</p>
+                        <span class="usage">Usage: !lyrics</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!nowplaying</h3>
+                        <p>Show currently playing track</p>
+                        <span class="usage">Usage: !nowplaying</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!pause</h3>
+                        <p>Pause the current track</p>
+                        <span class="usage">Usage: !pause</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!queue</h3>
+                        <p>Display the current queue</p>
+                        <span class="usage">Usage: !queue</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!remove</h3>
+                        <p>Remove a song from the queue (DJ only)</p>
+                        <span class="usage">Usage: !remove &lt;position&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!seek</h3>
+                        <p>Seek to a specific position in the current track</p>
+                        <span class="usage">Usage: !seek &lt;time&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!shuffle</h3>
+                        <p>Shuffle the current queue (DJ only)</p>
+                        <span class="usage">Usage: !shuffle</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!volume</h3>
+                        <p>Adjust the music volume</p>
+                        <span class="usage">Usage: !volume &lt;volume_level&gt;</span>
+                    </div>
+                    <!-- Add more music commands -->
+                </div>
             </div>
-        </div>
 
-        <div class="category" id="utility">
-            <h2>Utility Commands</h2>
-            <div class="commands">
-                <div class="command" data-command="!avatar" data-description="Get user avatar.">avatar</div>
-                <div class="command" data-command="!botinfo" data-description="Display bot information.">botinfo</div>
-                <div class="command" data-command="!help" data-description="Shows all of the bot\'s commands.">help</div>
-                <div class="command" data-command="!ping" data-description="Check bot latency.">ping</div>
-                <div class="command" data-command="!roleinfo" data-description="Get information about a role.">roleinfo</div>
-                <div class="command" data-command="!serverinfo" data-description="Display information about the server.">serverinfo</div>
-                <div class="command" data-command="!userinfo" data-description="Display information about a user.">userinfo</div>
+            <!-- Moderation Commands -->
+            <div class="command-category">
+                <h2>🛡️ Moderation Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <h3>!ban</h3>
+                        <p>Ban a member from the server</p>
+                        <span class="usage">Usage: !ban @user [reason]</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!kick</h3>
+                        <p>Kick a member from the server</p>
+                        <span class="usage">Usage: !kick @user [reason]</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!clear</h3>
+                        <p>Clear messages from the channel</p>
+                        <span class="usage">Usage: !clear &lt;amount&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!lockdown</h3>
+                        <p>Lock/unlock the current channel</p>
+                        <span class="usage">Usage: !lockdown on/off</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!slowmode</h3>
+                        <p>Set channel slowmode</p>
+                        <span class="usage">Usage: !slowmode &lt;time&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!timeout</h3>
+                        <p>Timeout a member</p>
+                        <span class="usage">Usage: !timeout @user &lt;duration&gt; [reason]</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!warn</h3>
+                        <p>Warn a member</p>
+                        <span class="usage">Usage: !warn @user [reason]</span>
+                    </div>
+                    <!-- Add more moderation commands -->
+                </div>
+            </div>
+
+            <!-- Fun Commands -->
+            <div class="command-category">
+                <h2>🎮 Fun Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <h3>!8ball</h3>
+                        <p>Ask the magic 8ball a question</p>
+                        <span class="usage">Usage: !8ball &lt;question&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!meme</h3>
+                        <p>Get a random meme</p>
+                        <span class="usage">Usage: !meme</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!ascii</h3>
+                        <p>Convert text to ASCII art</p>
+                        <span class="usage">Usage: !ascii &lt;text&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!coinflip</h3>
+                        <p>Flip a coin</p>
+                        <span class="usage">Usage: !coinflip</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!roll</h3>
+                        <p>Roll a dice with custom sides</p>
+                        <span class="usage">Usage: !roll &lt;sides&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!rps</h3>
+                        <p>Play rock paper scissors</p>
+                        <span class="usage">Usage: !rps &lt;rock/paper/scissors&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!say</h3>
+                        <p>Make the bot say something</p>
+                        <span class="usage">Usage: !say &lt;message&gt;</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!weather</h3>
+                        <p>Get weather information for a location</p>
+                        <span class="usage">Usage: !weather &lt;location&gt;</span>
+                    </div>
+                    <!-- Add more fun commands -->
+                </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>Made with ❤️ by <a href="https://github.com/Enyzelle">Enyzelle</a> for the Discord community.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="https://github.com/Enyzelle/Stellar-Bot" target="_blank">GitHub</a>
+        </div>
+        <p>© 2024 Stellar Bot. Made with ❤️ by Enyzelle</p>
     </footer>
 
-    <div class="modal" id="commandModal">
-        <div class="modal-content">
-            <h3 id="modalCommand"></h3>
-            <p id="modalDescription"></p>
-            <button class="close" onclick="closeModal()">Close</button>
-        </div>
-    </div>
-
-    <script>
-        const commands = document.querySelectorAll('.command');
-        const modal = document.getElementById('commandModal');
-        const modalCommand = document.getElementById('modalCommand');
-        const modalDescription = document.getElementById('modalDescription');
-
-        commands.forEach(command => {
-            command.addEventListener('click', () => {
-                modalCommand.textContent = `Command: ${command.dataset.command}`;
-                modalDescription.textContent = `Description: ${command.dataset.description}`;
-                modal.style.display = 'flex';
-            });
-        });
-
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
-</html>
+</html> 

@@ -3,116 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FAQ for Stellar Music Bot">
-    <title>FAQ - Stellar Music Bot</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #1e1e1e, #292929);
-            color: #fff;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(to right, #2c2c2c, #3e3e3e);
-            border-bottom: 2px solid #444;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            color: #bbb;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #999;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        .faq-item h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #bbb;
-            border-bottom: 2px solid #555;
-            padding-bottom: 5px;
-        }
-
-        .faq-item p {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: linear-gradient(to right, #1e1e1e, #292929);
-            color: #aaa;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: #bbb;
-            text-decoration: none;
-        }
-    </style>
+    <title>FAQ - Stellar Bot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
-    <header>
-        <h1>Stellar Music Bot FAQ</h1>
-        <p>Find answers to the most common questions about Stellar Music Bot</p>
-    </header>
-
-    <div class="container">
-        <div class="faq-item">
-            <h2>What is Stellar Music Bot?</h2>
-            <p>Stellar Music Bot is a powerful, all-in-one Discord bot designed to enhance your server with music, fun, moderation, and utility commands.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Stellar Bot Logo">
+                <span>Stellar Bot</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="commands.html">Commands</a>
+                <a href="faq.html" class="active">FAQ</a>
+                <a href="https://discord.gg/your-server" target="_blank">Support</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
         </div>
+    </nav>
 
-        <div class="faq-item">
-            <h2>How do I add Stellar Music Bot to my server?</h2>
-            <p>You can add Stellar Music Bot to your server by clicking the invite link provided by the bot's developer or checking the official website.</p>
-        </div>
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I add Stellar Bot to my server?</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Click the "Add to Discord" button on our homepage, then select your server and authorize the bot. You'll need "Manage Server" permissions to add bots to a server.</p>
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <h2>What are the music commands available?</h2>
-            <p>Stellar Music Bot offers a variety of music commands, including <code>play</code>, <code>pause</code>, <code>skip</code>, <code>loop</code>, and many more. For the full list, check the <a href="commands.html">command list</a>.</p>
-        </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What permissions does the bot need?</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Stellar Bot needs the following permissions to function properly:</p>
+                    <ul>
+                        <li>Send Messages</li>
+                        <li>Connect to Voice Channels</li>
+                        <li>Speak in Voice Channels</li>
+                        <li>Embed Links</li>
+                        <li>Additional permissions for moderation commands</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <h2>Does the bot support Spotify?</h2>
-            <p>Yes, Stellar Music Bot supports Spotify links for tracks and playlists, along with YouTube and other popular platforms.</p>
-        </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I set up the DJ role?</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Use the !dj command to manage DJ roles:</p>
+                    <code>!dj set @role</code> - Set a role as DJ<br>
+                    <code>!dj remove</code> - Remove DJ role requirement<br>
+                    <code>!dj info</code> - View current DJ settings
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <h2>Who can use the moderation commands?</h2>
-            <p>Moderation commands are restricted to users with appropriate server permissions, such as administrators or moderators.</p>
-        </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What music sources are supported?</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Stellar Bot supports playback from:</p>
+                    <ul>
+                        <li>YouTube</li>
+                        <li>Spotify</li>
+                        <li>SoundCloud</li>
+                        <li>Direct URLs</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="faq-item">
-            <h2>How do I report an issue with the bot?</h2>
-            <p>If you encounter any issues, please contact the bot developer or join the support server linked on the bot's page.</p>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I report issues or suggest features?</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can:</p>
+                    <ul>
+                        <li>Join our <a href="https://discord.gg/your-server">Support Server</a></li>
+                        <li>Create an issue on our <a href="https://github.com/Enyzelle/Stellar-Bot">GitHub repository</a></li>
+                        <li>Contact us via email at support@stellarbot.com</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <p>Made with ❤️ by <a href="https://github.com/Enyzelle">Enyzelle</a>. Got more questions? Reach out to us!</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="https://github.com/Enyzelle/Stellar-Bot" target="_blank">GitHub</a>
+        </div>
+        <p>© 2024 Stellar Bot. Made with ❤️ by Enyzelle</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
-</html>
+</html> 
