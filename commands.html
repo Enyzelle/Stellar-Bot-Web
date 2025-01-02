@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/logo.png" alt="Stellar Bot Logo">
+                <img src="assets/img/logo.png" alt="Stellar Bot Logo">
                 <span>Stellar Bot</span>
             </div>
             <div class="nav-links">
@@ -38,6 +38,64 @@
         </div>
 
         <div class="commands-grid">
+            <!-- Configuration Commands -->
+            <div class="command-category">
+                <h2>👑 Premium Commands</h2>
+                <div class="command-list">
+                    <div class="command-item">
+                        <h3>!247</h3>
+                        <p>Keep the bot in your voice channel 24/7 with premium access. Never worry about the bot leaving!</p>
+                        <span class="usage">Usage: !247</span>
+                    </div>
+                    <div class="command-item">
+                        <h3>!create-playlist</h3>
+                        <p>Create a custom playlist with your own songs.</p>
+                        <span class="usage">Usage: !create-playlist &lt;name | song1, song2, song3, ... | description | thumbnail&gt;</span>
+                        <div class="command-examples">
+                            <code>!create-playlist My Playlist | Song1, Song2, Song3 | This is my playlist | https://i.imgur.com/12...jpg</code>
+                        </div>
+                    </div>
+                    <div class="command-item">
+                        <h3>!delete-playlist</h3>
+                        <p>Delete one of your playlists.</p>
+                        <span class="usage">Usage: !delete-playlist &lt;name&gt;</span>
+                        <div class="command-examples">
+                            <code>!delete-playlist My Playlist</code>
+                        </div>
+                    </div>
+                    <div class="command-item">
+                        <h3>!edit-playlist</h3>
+                        <p>Edit one of your playlists.</p>
+                        <span class="usage">Usage: !edit-playlist &lt;name | action | value&gt;</span>
+                        <div class="command-examples">
+                            <code>!edit-playlist My Playlist add Song1, Song2, Song3</code> - Add songs to the playlist
+                            <code>!edit-playlist My Playlist remove Song1, Song2, Song3</code> - Remove songs from the playlist
+                            <code>!edit-playlist My Playlist replace Song1, Song2, Song3</code> - Replace songs in the playlist
+                            <code>!edit-playlist My Playlist name New Name</code> - Change the name of the playlist
+                            <code>!edit-playlist My Playlist description New Description</code> - Change the description of the playlist
+                            <code>!edit-playlist My Playlist thumbnail New Thumbnail</code> - Change the thumbnail of the playlist
+                        </div>
+                    </div>
+                    <div class="command-item">
+                        <h3>!play-playlist</h3>
+                        <p>Play a saved playlist.</p>
+                        <span class="usage">Usage: !play-playlist &lt;name&gt;</span>
+                        <div class="command-examples">
+                            <code>!play-playlist My Playlist</code> - Play the playlist
+                        </div>
+                    </div>
+                    <div class="command-item">
+                        <h3>!show-playlists</h3>
+                        <p>Show playlists.</p>
+                        <span class="usage">Usage: !show-playlists &lt;name&gt;</span>
+                        <div class="command-examples">
+                            <code>!show-playlists</code> - Show all of the playlist including the ones you have created
+                            <code>!show-playlists My Playlist</code> - Show a specific playlist
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Configuration Commands -->
             <div class="command-category">
                 <h2>⚙️ Configuration Commands</h2>
